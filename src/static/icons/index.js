@@ -19,23 +19,23 @@ import VimIcon from './vim.svg'
 import WorkIcon from './workIcon.svg'
 
 export default {
-  cpp: <CppIcon />,
-  css: <CssIcon title='css' />,
+  cpp: <img src={CppIcon} />,
+  css: <img src={CssIcon} title='css' />,
   elixir: <img src={ElixirIcon} />,
-  github: <GithubIcon />,
-  git: <GitIcon />,
-  javascript: <JavascriptIcon />,
-  java: <JavaIcon />,
-  lua: <LuaIcon />,
-  nginx: <NginxIcon />,
-  node: <NodeIcon />,
-  _react: <ReactIcon />, // Underscore prefix is required because react is a global variable in react apps, I believe.
-  rails: <RailsIcon />,
-  school: <SchoolIcon />,
-  twitter: <TwitterIcon />,
-  ubuntu: <UbuntuIcon />,
-  vim: <VimIcon />,
-  work: <WorkIcon />
+  github: <img src={GithubIcon} />,
+  git: <img src={GitIcon} />,
+  javascript: <img src={JavascriptIcon} />,
+  java: <img src={JavaIcon} />,
+  lua: <img src={LuaIcon} />,
+  nginx: <img src={NginxIcon} />,
+  node: <img src={NodeIcon} />,
+  _react: <img src={ReactIcon} />, // Underscore prefix is required because react is a global variable in react apps, I believe.
+  rails: <img src={RailsIcon} />,
+  school: <img src={SchoolIcon} />,
+  twitter: <img src={TwitterIcon} />,
+  ubuntu: <img src={UbuntuIcon} />,
+  vim: <img src={VimIcon} />,
+  work: <img src={WorkIcon} />
 }
 
 export const displayNames = {
