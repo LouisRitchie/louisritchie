@@ -8,13 +8,18 @@ import './styles.css'
 
 class App extends Component {
   state = {
-    lightsOn: false // when lights off, opacity is 0.
+    lightsOn: true, // when lights off, opacity is 0.
+    firstRender: true
   }
 
   _hitLightSwitch = () => this.setState({ lightsOn: !this.state.lightsOn })
 
+  componentDidMount() {
+    this.setState({ firstRender: false })
+  }
+
   render() {
-    const { lightsOn } = this.state
+    const { firstRender, lightsOn } = this.state
 
     return (
       <div className="app">
@@ -24,7 +29,7 @@ class App extends Component {
           <Switch>
             {routes.map(({component: Component, name, path, regex}) => (
               <Route exact key={path} path={regex} render={(props) => (
-                <TransitionContainer hitLightSwitch={this._hitLightSwitch} match={props.match}>
+                <TransitionContainer hitLightSwitch={this._hitLightSwitch} firstRender={firstRender} match={props.match}>
                   <Component {...props} />
                 </TransitionContainer>
               )} />
