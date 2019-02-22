@@ -8,17 +8,19 @@ import './styles.css'
 class TransitionContainer extends Component {
   static propTypes = {
     children: PropTypes.object.isRequired,
+    firstRender: PropTypes.bool.isRequired,
     hitLightSwitch: PropTypes.func.isRequired
   }
 
   componentDidMount = () => {
     window.scrollTo(0, 0)
-    setTimeout(this.props.hitLightSwitch, 200)
+    !this.props.firstRender && setTimeout(this.props.hitLightSwitch, 200)
   }
 
-  componentWillUnmount = () => this.props.hitLightSwitch()
+  componentWillUnmount = () => !this.props.firstRender && this.props.hitLightSwitch()
 
   render() {
+    console.log(this.props.firstRender)
     return this.props.children
   }
 }
