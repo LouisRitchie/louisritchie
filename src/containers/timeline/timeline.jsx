@@ -3,8 +3,8 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import './styles.css'
 import icons from 'static/icons'
-import items from 'static/items.json5'
-import timelineOrdering from 'static/timelineOrdering.json5'
+import items from 'static/items.json'
+import timelineOrdering from 'static/timelineOrdering.json'
 
 class Timeline extends Component {
   // transform the timeline elements into links.

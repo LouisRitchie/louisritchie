@@ -2,12 +2,11 @@ import React, { Component } from 'react'
 import ValueProp from 'components/valueProp'
 import './styles.css'
 import { Link } from 'react-router-dom'
-import items from 'static/items.json5'
+import items from 'static/items.json'
 import homeOrdering from 'static/homeOrdering'
 
 class Home extends Component {
   render() {
-    console.log(homeOrdering)
     return (
       <div className='home'>
         <div className='splash'>

@@ -6,7 +6,7 @@ import { resize$ } from 'lib/observables.js'
 import { Subject } from 'rxjs/Subject'
 import 'rxjs/add/operator/take'
 import 'rxjs/add/operator/takeUntil'
-import items from 'static/items.json5'
+import items from 'static/items.json'
 import './styles.css'
 
 class DetailPage extends Component {
